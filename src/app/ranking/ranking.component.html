@@ -1,1 +1,18 @@
-<p>ranking works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Jogador
+            </th>
+            <th>
+                Pontuação
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pontuacao of Pontuacoes">
+            <td>{{pontuacao.jogadorId}}</td>
+            <td>{{pontuacao.pontuacao}}</td>
+        </tr>
+    </tbody>
+</table>
