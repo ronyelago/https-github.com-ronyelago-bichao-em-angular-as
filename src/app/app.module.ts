@@ -9,6 +9,8 @@ import { RegistrarPontuacaoComponent } from './registrar-pontuacao/registrar-pon
 import { EstatisticasJogadorComponent } from './estatisticas-jogador/estatisticas-jogador.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,14 @@ import { AppRoutingModule } from './app-routing.module';
     RegistrarPontuacaoComponent,
     EstatisticasJogadorComponent
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    FormsModule, 
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
