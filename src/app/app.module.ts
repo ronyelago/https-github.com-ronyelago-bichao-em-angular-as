@@ -7,7 +7,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { RegistrarPontuacaoComponent } from './registrar-pontuacao/registrar-pontuacao.component';
 import { EstatisticasJogadorComponent } from './estatisticas-jogador/estatisticas-jogador.component';
-import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
