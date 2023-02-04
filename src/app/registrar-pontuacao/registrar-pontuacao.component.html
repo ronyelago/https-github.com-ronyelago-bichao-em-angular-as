@@ -1,1 +1,36 @@
-<p>registrar-pontuacao works!</p>
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 w-50 bd-highlight">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Jogador</span>
+            <input type="text" class="form-control" [(ngModel)]="novaPontuacao.JogadorId">
+        </div>
+    </div>
+</div>
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 w-50 bd-highlight">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Pontuação</span>
+            <input type="text" class="form-control" [(ngModel)]="novaPontuacao.Pontuacao">
+        </div>
+    </div>
+</div>
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 w-50 bd-highlight">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Data da Partida</span>
+            <input
+				class="form-control"
+				placeholder="dd-mm-yyyy"
+				name="dp"
+				[(ngModel)]="selectedDate"
+				ngbDatepicker
+				#d="ngbDatepicker"
+			/>
+			<button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+
+        </div>
+    </div>
+</div>
+<button type="button" (click)="registrarPontuacao()" class="btn btn-primary">
+    Salvar
+  </button>

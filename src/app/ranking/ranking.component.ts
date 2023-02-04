@@ -7,7 +7,7 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./ranking.component.less']
 })
 export class RankingComponent {
-  
+
   constructor(private service: ApiserviceService) {}
 
   ngOnInit(): void {
