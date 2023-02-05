@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiserviceService } from '../apiservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ranking',
@@ -8,7 +9,7 @@ import { ApiserviceService } from '../apiservice.service';
 })
 export class RankingComponent {
 
-  constructor(private service: ApiserviceService) {}
+  constructor(private service: ApiserviceService, private router: Router) {}
 
   ngOnInit(): void {
     this.refreshRanking();
@@ -20,5 +21,10 @@ export class RankingComponent {
     this.service.obterRanking().subscribe(data => {
       this.Pontuacoes = data;
     });
+  }
+
+  detalharJogador(jogadorId: string)
+  {
+      console.log(jogadorId);
   }
 }
