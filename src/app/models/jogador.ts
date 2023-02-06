@@ -1,10 +1,10 @@
-export class Jogador
+export interface Jogador
 {
-    public JogadorId: string;
-    public PartidasJogadas: number;
-    public PontuacaoMedia: number;
-    public MaiorPontuacao: number;
-    public MenorPontuacao: number;
-    public RecordesPessoais: number;
-    public JogaDesde: Date;
+    Id: string;
+    PartidasJogadas: number;
+    PontuacaoMedia: number;
+    MaiorPontuacao: number;
+    MenorPontuacao: number;
+    RecordesPessoais: number;
+    JogaDesde: Date;
 }

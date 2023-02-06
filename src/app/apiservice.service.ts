@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { NovaPontuacaoModel } from './models/NovaPontuacaoModel';
+import { Jogador } from './models/jogador';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,10 @@ export class ApiserviceService {
 
   obterRanking(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl + 'GerarRanking') 
+  }
+
+  obterDetalheJogador(jogadorId: string): Observable<Jogador> {
+    return this.http.get<Jogador>(this.apiUrl + 'ObterJogador/' + jogadorId);
   }
 
   registrarPontuacao(viewModel: NovaPontuacaoModel): Observable<NovaPontuacaoModel> {

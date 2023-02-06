@@ -10,28 +10,26 @@
         </tr>
     </thead>
     <tbody>
-        
-            <tr *ngFor="let pontuacao of Pontuacoes">
-                <td style="cursor: pointer" (click)="detalharJogador(pontuacao.jogadorId)" >{{pontuacao.jogadorId}}</td>
-                <td>{{pontuacao.pontuacao}}</td>
-            </tr>
+      <tr *ngFor="let pontuacao of Pontuacoes">
+          <td style="cursor: pointer" (click)="detalharClick(pontuacao.jogadorId)" data-bs-toggle="modal" data-bs-target="#estatisticasJogador">{{pontuacao.jogadorId}}</td>
+          <td>{{pontuacao.pontuacao}}</td>
+      </tr>
     </tbody>
 </table>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="estatisticasJogador" tabindex="-1" role="dialog" aria-labelledby="estatisticasJogadorModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{}}</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" (click)="closeClick()">
+        <h5 class="modal-title" id="estatisticasJogadorModalLabel">{{JogadorId}}- Estatisticas</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" (click)="closeModal()" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-department [depart]="depart" *ngIf="ActivateAddEditDepartComp">
-        </app-add-edit-department>
+        <app-estatisticas-jogador [JogadorId]="JogadorId" *ngIf="AtivarDetalheJogador"></app-estatisticas-jogador>
       </div>
     </div>
   </div>

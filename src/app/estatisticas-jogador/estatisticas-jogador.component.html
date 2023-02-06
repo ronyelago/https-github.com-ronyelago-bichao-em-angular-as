@@ -1,1 +1,28 @@
-<p>estatisticas-jogador works!</p>
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 w-50 db-highlight">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Partidas Jogadas</span>
+            <input class="form-control" [(ngModel)]="Jogador.PartidasJogadas" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Pontuação Média</span>
+            <input class="form-control" [(ngModel)]="Jogador.PontuacaoMedia" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Maior Pontuação</span>
+            <input class="form-control" [(ngModel)]="Jogador.MaiorPontuacao" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Menor Pontuação</span>
+            <input class="form-control" [(ngModel)]="Jogador.MenorPontuacao" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Recordes Pessoais</span>
+            <input class="form-control" [(ngModel)]="Jogador.RecordesPessoais" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Joga Desde</span>
+            <input class="form-control" [(ngModel)]="Jogador.JogaDesde" readonly>
+        </div>
+    </div>
+</div>

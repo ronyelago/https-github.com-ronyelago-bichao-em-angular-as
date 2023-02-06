@@ -16,6 +16,8 @@ export class RankingComponent {
   }
 
   Pontuacoes: any = [];
+  JogadorId: string;
+  AtivarDetalheJogador = false;
 
   refreshRanking() {
     this.service.obterRanking().subscribe(data => {
@@ -23,8 +25,12 @@ export class RankingComponent {
     });
   }
 
-  detalharJogador(jogadorId: string)
-  {
-      console.log(jogadorId);
+  detalharClick(jogadorId: string) {
+    this.AtivarDetalheJogador = true;
+    this.JogadorId = jogadorId;
+  }
+
+  closeModal() {
+    this.AtivarDetalheJogador = false;
   }
 }
